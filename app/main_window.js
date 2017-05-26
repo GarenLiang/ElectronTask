@@ -7,7 +7,8 @@ class MainWindow extends BrowserWindow {
       titleBarStyle: 'hidden',
       height: 550,
       width: 350,
-      show: false
+      show: false,
+      webPreferences: { backgroundThrottling: false }
     });
     this.loadURL(url);
     this.on('blur', this.onBlur.bind(this));
